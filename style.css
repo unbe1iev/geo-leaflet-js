@@ -27,6 +27,12 @@ body {
     flex-wrap: wrap;
 }
 
+#puzzle-to-drop {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
 section, canvas {
     margin: 10px auto;
     width: 400px;
