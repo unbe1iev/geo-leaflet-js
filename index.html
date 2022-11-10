@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Geo LeafletJS</title>
-        <link rel="stylesheet" href="style.css" />
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="leaflet-1.7.1/leaflet.css" />
-        <script src="leaflet-1.7.1/leaflet-src.js"></script>
-        <script src="leaflet-1.7.1/leaflet-providers.js"></script>
-        <script src="leaflet-1.7.1/leaflet-image.js"></script>
-    </head>
+    <title>Geo LeafletJS</title>
+    <link rel="stylesheet" href="style.css">
 
-    <body>
-        <main class="app">
-            Your coordinates: <span id="my-location-coords"></span><br><br>
+    <link rel="stylesheet" href="leaflet-1.7.1/leaflet.css" />
+    <script src="leaflet-1.7.1/leaflet-src.js"></script>
+    <script src="leaflet-1.7.1/leaflet-providers.js"></script>
+    <script src="leaflet-1.7.1/leaflet-image.js"></script>
+  </head>
 
-            <button id="my-location-button">My localization</button>
-            <button id="raster-button">Raster</button>
-            <button id="puzzle-button">Puzzle</button><br>
+  <body>
+      <main class="puzzle" app-container>
+        <span class="puzzle-my-location" my-location>My location: </span><br>
 
-            <div id="flex-container">
-                <section id="map"></section>
-                <section id="puzzle-to-drag"></section>
-                <section id="puzzle-to-drop"></section>
-            </div>
-        </main>
+        <section class="puzzle-buttons">
+          <button localization-button>Localize me</button>
+          <button raster-button>Raster & Puzzle</button>
+        </section>
 
-        <script src="main.js"></script>
-    </body>
+        <section class="puzzle-main-area" main-container>
+          <div class="puzzle-location" map-container id="map"></div>
+          <section class="puzzle-area" puzzle-area></section>
+        </section>
+
+        <section class="puzzle-wrapper" puzzle-wrapper></section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
 </html>
